@@ -1,0 +1,4 @@
+creds.*
+*.pyc
+__pycache__
+discord.log
