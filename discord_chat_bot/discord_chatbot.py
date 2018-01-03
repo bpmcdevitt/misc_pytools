@@ -14,15 +14,5 @@ handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w'
 handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
 logger.addHandler(handler)
 
+
 client = discord.Client()
-
-token = creds.bot_token
-
-
-# login
-async def login(token):
-    await client.login(token)
-
-loop = asyncio.get_event_loop()
-loop.run_until_complete(login(token))
-loop.close()
