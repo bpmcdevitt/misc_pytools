@@ -5,16 +5,20 @@ import os
 import json
 from pprint import pprint
 
-class JsonUtils(object):
+class JsonParser(object):
     """ Json utility library """
+    def __init__(self):
+        return
 
 
-    def decode(self, json_file):
-        """ Decode a json string or file that contains json """
+    def decode_file(self, json_file):
+        """ Decode a json file """
         if os.path.isfile(json_file):
             with open(json_file, 'r'):
-                data = json.load(json_file)
-                return pprint(data)
-        else:
-            data = json.loads(json_file)
-            return pprint(data)
+                return json.load(json_file)
+
+
+    def decode_str(self, json_str):
+        """ Decode a json string """
+        data = json.loads(json_str)
+        return pprint(data)
