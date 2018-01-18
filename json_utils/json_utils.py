@@ -14,8 +14,9 @@ class JsonParser(object):
     def decode_file(self, json_file):
         """ Decode a json file """
         if os.path.isfile(json_file):
-            with open(json_file, 'r'):
-                return json.load(json_file)
+            with open(json_file, 'r') as f:
+                data = json.load(f)
+                return data
 
 
     def decode_str(self, json_str):
