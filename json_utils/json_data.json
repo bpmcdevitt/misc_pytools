@@ -1,0 +1,43 @@
+{
+    "base": "stations",
+    "clouds": {
+        "all": 1
+    },
+    "cod": 200,
+    "coord": {
+        "lat": 41.88,
+        "lon": -87.62
+    },
+    "dt": 1516248900,
+    "id": 4887398,
+    "main": {
+        "humidity": 78,
+        "pressure": 1026,
+        "temp": 17.4,
+        "temp_max": 19.4,
+        "temp_min": 15.8
+    },
+    "name": "Chicago",
+    "sys": {
+        "country": "US",
+        "id": 966,
+        "message": 0.0039,
+        "sunrise": 1516281240,
+        "sunset": 1516315704,
+        "type": 1
+    },
+    "visibility": 16093,
+    "weather": [
+        {
+            "description": "haze",
+            "icon": "50n",
+            "id": 721,
+            "main": "Haze"
+        }
+    ],
+    "wind": {
+        "deg": 230,
+        "gust": 9.3,
+        "speed": 13.87
+    }
+}
