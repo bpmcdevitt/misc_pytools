@@ -18,4 +18,8 @@ def find_user_gists(username):
 
 
 if __name__ == '__main__':
-    print(find_user_gists(username))
+    user, urls = find_user_gists(username)
+    print('Gists found for GitHub user: {} \n'.format(user))
+    print('----------------------------------------------------------')
+    for url in urls:
+        print(url)
