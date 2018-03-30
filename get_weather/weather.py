@@ -13,10 +13,12 @@ class Weather(object):
         self.base_url = 'http://api.openweathermap.org/data/2.5/'
 
     def zipcode(self, zip_code, country_code):
-        r = requests.get(self.base_url + 'weather?zip=' + str(zip_code) + ','
-                                                        + country_code
-                                                        + self.temp_unit
-                                                        + creds.api_login)
+        r = requests.get('{}weather?zip={},{}{}{}'.format(
+            self.base_url,
+            str(zip_code),
+            country_code,
+            self.temp_unit,
+            creds.api_login))
         return json.dumps(r.json(), sort_keys=True, indent=4)
 
     def city_lookup(self, city_name, country_code):
@@ -46,4 +48,4 @@ class Weather(object):
 if __name__ == '__main__':
     weather = Weather()
 
-    print(weather.city_lookup('Chicago', 'US'))
+    print(weather.zipcode('60614', 'US'))
